@@ -32,7 +32,13 @@ The goal of this project is to build a scalable and robust web crawler that disc
 ### Install Dependencies
 1. Clone this repository:
    ```bash
-   git clone <repo_url>
+   git clone https://github.com/vikaaas-99/web-crawler.git
+   ```
+
+2. Create and activate virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
    cd crawler
    ```
 
@@ -43,7 +49,7 @@ The goal of this project is to build a scalable and robust web crawler that disc
 
 ---
 
-## **Run the Script
+## **Run the Script**
 1.	Execute the crawler:
     ```bash
     python main.py
@@ -59,7 +65,7 @@ The goal of this project is to build a scalable and robust web crawler that disc
 
 ---
 
-## **Approach
+## **Approach**
 1\. Pattern Matching:
 - Uses predefined patterns like /dp/, /gp/product/, and /item/ to identify product URLs.
 - Employs regex for robust URL filtering.
@@ -72,29 +78,30 @@ The goal of this project is to build a scalable and robust web crawler that disc
 
 ---
 
-## **Known Limitations
+## **Known Limitations**
 - Websites requiring CAPTCHA or anti-bot measures may not be fully crawlable.
 - JavaScript-heavy sites may require additional setup (e.g., Selenium).
 
 ---
 
-## **Future Enhancements
+## **Future Enhancements**
 - Implement retry mechanisms for failed requests.
 - Expand product URL patterns to support more e-commerce platforms.
 
 ---
 
-## **Output Example
+## **Output Example**
 
 ### Sample output (product_urls.json):
-    ```json
-    {
-        "www.amazon.in": [
-            "https://www.amazon.in/GRECIILOOKS-Women-Rayon-Regular-X-Large/dp/B0CNZYHGT4?_encoding=UTF8&pd_rd_w=IgnGN&content-id=amzn1.sym.20f90b4c-138e-4c87-8bfd-4c0edd6f78bf&pf_rd_p=20f90b4c-138e-4c87-8bfd-4c0edd6f78bf&pf_rd_r=N6E0GFSRK6DREAVHQFBP&pd_rd_wg=8lo9J&pd_rd_r=b1bd3dd1-e250-4998-aaa2-e97d8677f718&ref_=pd_hp_d_btf_SPB",
-            "https://www.amazon.in/Crompton-Storage-Heater-Advanced-Safety/dp/B08GSQXLJ2?_encoding=UTF8&pd_rd_w=ynDNx&content-id=amzn1.sym.21c54421-6876-41ac-9da2-30c4fcf91bf8&pf_rd_p=21c54421-6876-41ac-9da2-30c4fcf91bf8&pf_rd_r=N6E0GFSRK6DREAVHQFBP&pd_rd_wg=8lo9J&pd_rd_r=b1bd3dd1-e250-4998-aaa2-e97d8677f718&ref_=pd_hp_d_btf_homenKitchen",
-        ],
-        "www.flipkart.com": [
-            "https://www.flipkart.com/oneplus-buds-3-tws-ear-earbuds-sliding-volume-control-49db-anc-bluetooth/p/itmfccde298e032a?pid=ACCGRNFMDTYGWMW9"
-        ]
-    }
-    ```
+
+ ```json
+ {
+     "www.amazon.in": [
+         "https://www.amazon.in/GRECIILOOKS-Women-Rayon-Regular-X-Large/dp/B0CNZYHGT4?_encoding=UTF8&pd_rd_w=IgnGN&content-id=amzn1.sym.20f90b4c-138e-4c87-8bfd-4c0edd6f78bf&pf_rd_p=20f90b4c-138e-4c87-8bfd-4c0edd6f78bf&pf_rd_r=N6E0GFSRK6DREAVHQFBP&pd_rd_wg=8lo9J&pd_rd_r=b1bd3dd1-e250-4998-aaa2-e97d8677f718&ref_=pd_hp_d_btf_SPB",
+         "https://www.amazon.in/Crompton-Storage-Heater-Advanced-Safety/dp/B08GSQXLJ2?_encoding=UTF8&pd_rd_w=ynDNx&content-id=amzn1.sym.21c54421-6876-41ac-9da2-30c4fcf91bf8&pf_rd_p=21c54421-6876-41ac-9da2-30c4fcf91bf8&pf_rd_r=N6E0GFSRK6DREAVHQFBP&pd_rd_wg=8lo9J&pd_rd_r=b1bd3dd1-e250-4998-aaa2-e97d8677f718&ref_=pd_hp_d_btf_homenKitchen",
+     ],
+     "www.flipkart.com": [
+         "https://www.flipkart.com/oneplus-buds-3-tws-ear-earbuds-sliding-volume-control-49db-anc-bluetooth/p/itmfccde298e032a?pid=ACCGRNFMDTYGWMW9"
+     ]
+ }
+ ```
